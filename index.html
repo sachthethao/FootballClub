@@ -4,27 +4,47 @@
     <meta charset="UTF-8" />
     <!-- bang ma ky tu cho trang web -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/img/favicon/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/img/favicon/site.webmanifest" />
+    <link rel="stylesheet" href="/css/style.css" />
     <title>Câu lạc bộ Real Madrid</title>
   </head>
 
   <body>
     <h1>Câu lạc bộ Real Madrid</h1>
-    <table>
-      <tr>
-        <td colspan="6">
-          <a href="/index.html">Trang chủ</a>
-          <a href="/page/schedule.html">Lịch thi đấu</a>
-          <a href="/page/standings.html">Bảng xếp hạng</a>
-          <a href="/page/players.html">Cầu thủ</a>
-          <a href="/page/blog.html">Blog</a>
-          <a href="/page/FAQ.html">FAQ</a>
-        </td>
-        <td colspan="1">
-          Search
-        </td>
-      </tr>
-    </table>
-   <hr>
+
+    <div style="display: flex; justify-content: center; align-items: center">
+      <table style="background-color: red; color: aliceblue">
+        <tr>
+          <td colspan="6">
+            <a href="/index.html" class="header">Trang chủ</a>
+            <a href="/page/schedule.html" class="header">Lịch thi đấu</a>
+            <a href="/page/standings.html" class="header">Bảng xếp hạng</a>
+            <a href="/page/players.html" class="header">Cầu thủ</a>
+            <a href="/page/blog.html" class="header">Blog</a>
+            <a href="/page/FAQ.html" class="header">FAQ</a>
+          </td>
+          <td colspan="1">Search</td>
+        </tr>
+      </table>
+    </div>
+    <hr />
     <table>
       <thead>
         <tr>
@@ -34,47 +54,76 @@
       </thead>
       <tbody>
         <tr>
-          <td rowspan="5"> <img src="/img/FootballMatch.jpg" alt="Câu lạc bộ Real Madrid" width="320" height="180"/> </td>
-          <td><img src="/img/Bruno.jpg" alt="Bruno" width="53" height="30" /></td>
-          <td> Bruno Fernandes: Người gìn giữ xu hướng đang mai một ở Premier League</td>
+          <td rowspan="5">
+            <img
+              src="/img/FootballMatch.jpg"
+              alt="Câu lạc bộ Real Madrid"
+              width="320"
+              height="180"
+            />
+          </td>
+          <td>
+            <img src="/img/Bruno.jpg" alt="Bruno" width="53" height="30" />
+          </td>
+          <td>
+            Bruno Fernandes: Người gìn giữ xu hướng đang mai một ở Premier
+            League
+          </td>
         </tr>
         <tr>
-          <td><img src="/img/Alvarez.jpg" alt="Alvarez" width="53" height="30" /></td>
+          <td>
+            <img src="/img/Alvarez.jpg" alt="Alvarez" width="53" height="30" />
+          </td>
           <td>Cú trượt chân nghiệt ngã của Julian Alvarez</td>
         </tr>
         <tr>
-          <td><img src="/img/Alvarez.jpg" alt="Alvarez" width="53" height="30" /></td>
+          <td>
+            <img src="/img/Alvarez.jpg" alt="Alvarez" width="53" height="30" />
+          </td>
           <td>Cú trượt chân nghiệt ngã của Julian Alvarez</td>
         </tr>
         <tr>
-          <td><img src="/img/Alvarez.jpg" alt="Alvarez" width="53" height="30" /></td>
+          <td>
+            <img src="/img/Alvarez.jpg" alt="Alvarez" width="53" height="30" />
+          </td>
           <td>Cú trượt chân nghiệt ngã của Julian Alvarez</td>
         </tr>
         <tr>
-          <td><img src="/img/Alvarez.jpg" alt="Alvarez" width="53" height="30" /></td>
+          <td>
+            <img src="/img/Alvarez.jpg" alt="Alvarez" width="53" height="30" />
+          </td>
           <td>Cú trượt chân nghiệt ngã của Julian Alvarez</td>
         </tr>
         <tr>
-          <td> Nhận định Atletico Madrid vs Real Madrid, 03h00 ngày 13/03: Vượt ải </td>
-          <td> <img src="/img/Bruno.jpg" alt="Bruno" width="53" height="30" /></td>
-          <td> Bruno Fernandes: Người gìn giữ xu hướng đang mai một ở Premier League </td>
+          <td>
+            Nhận định Atletico Madrid vs Real Madrid, 03h00 ngày 13/03: Vượt ải
+          </td>
+          <td>
+            <img src="/img/Bruno.jpg" alt="Bruno" width="53" height="30" />
+          </td>
+          <td>
+            Bruno Fernandes: Người gìn giữ xu hướng đang mai một ở Premier
+            League
+          </td>
         </tr>
       </tbody>
     </table>
-    <hr>
+    <hr />
     <table>
       <tr>
         <td>
           <table>
-            <thead>Lịch thi đấu</thead>
+            <thead>
+              Lịch thi đấu
+            </thead>
             <tbody>
               <tr>
                 <td>16/03</td>
-                <td>Villarreal  - Real Madrid</td>
+                <td>Villarreal - Real Madrid</td>
               </tr>
               <tr>
                 <td>30/03</td>
-                <td>Real Madrid  - Leganes</td>
+                <td>Real Madrid - Leganes</td>
               </tr>
               <tr>
                 <td>02/04</td>
@@ -89,17 +138,19 @@
                 <td>Arsenal - Real Madrid</td>
               </tr>
               <tr>
-                <td>Xem  thêm</td>
+                <td><a href="/page/schedule.html">Xem thêm</a></td>
               </tr>
             </tbody>
           </table>
         </td>
-       <td>
+        <td>
           <table>
-            <thead>Kết quả</thead>
+            <thead>
+              Kết quả
+            </thead>
             <tbody>
               <tr>
-                <td>Atl. Madrid  - Real Madrid *</td>
+                <td>Atl. Madrid - Real Madrid *</td>
                 <td>1 - 1</td>
               </tr>
               <tr>
@@ -107,7 +158,7 @@
                 <td>2 - 1</td>
               </tr>
               <tr>
-                <td>Real Madrid -  Atl. Madrid</td>
+                <td>Real Madrid - Atl. Madrid</td>
                 <td>2 - 1</td>
               </tr>
               <tr>
@@ -119,14 +170,16 @@
                 <td>0 - 1</td>
               </tr>
               <tr>
-                <td>Xem thêm</td>
+                <td><a href="/page/schedule.html">Xem thêm</a></td>
               </tr>
             </tbody>
           </table>
-       </td>
+        </td>
         <td>
           <table>
-            <thead>Bảng xếp hạng</thead>
+            <thead>
+              Bảng xếp hạng
+            </thead>
             <tbody>
               <tr>
                 <td>Barcelona</td>
@@ -154,14 +207,16 @@
                 <td>44</td>
               </tr>
               <tr>
-                <td>Xem thêm</td>
+                <td><a href="/page/standings.html">Xem thêm</a></td>
               </tr>
             </tbody>
           </table>
         </td>
         <td>
           <table>
-            <thead>Tháng  3 - 2025</thead>
+            <thead>
+              Tháng 3 - 2025
+            </thead>
             <tbody>
               <tr>
                 <td>T2</td>
@@ -222,18 +277,20 @@
         </td>
       </tr>
     </table>
-    <hr>
+    <hr />
     <table>
       <td>
         <table>
-          <thead>Cầu thủ</thead>
+          <thead>
+            Cầu thủ
+          </thead>
           <tbody>
             <tr>
-              <td><img src="/img/Endrick.png" alt="Endrick"></td>
-              <td><img src="/img/Garcia.png" alt="Garcia"></td>
-              <td><img src="/img/Mbappe.png" alt="Mbappe"></td>
-              <td><img src="/img/Rodrygo.png" alt="Rodrygo"></td>
-              <td><img src="/img/Vinicius.png" alt="Vinicius"></td>
+              <td><img src="/img/Endrick.png" alt="Endrick" /></td>
+              <td><img src="/img/Garcia.png" alt="Garcia" /></td>
+              <td><img src="/img/Mbappe.png" alt="Mbappe" /></td>
+              <td><img src="/img/Rodrygo.png" alt="Rodrygo" /></td>
+              <td><img src="/img/Vinicius.png" alt="Vinicius" /></td>
             </tr>
             <tr>
               <td>Endrick</td>
@@ -243,48 +300,62 @@
               <td>Vinicius</td>
             </tr>
             <tr>
-              <td>Tuổi : 18 - Vị  trí: Tiền đạo</td>
-              <td>Tuổi : 20 - Vị  trí: Tiền đạo</td>
-              <td>Tuổi : 26 - Vị  trí: Tiền đạo</td>
-              <td>Tuổi : 24 - Vị  trí: Tiền đạo</td>
-              <td>Tuổi : 24 - Vị  trí: Tiền đạo</td>
+              <td>Tuổi : 18 - Vị trí: Tiền đạo</td>
+              <td>Tuổi : 20 - Vị trí: Tiền đạo</td>
+              <td>Tuổi : 26 - Vị trí: Tiền đạo</td>
+              <td>Tuổi : 24 - Vị trí: Tiền đạo</td>
+              <td>Tuổi : 24 - Vị trí: Tiền đạo</td>
             </tr>
             <tr>
-              <td>Xem  thêm</td>
+              <td><a href="/page/players.html">Xem thêm</a></td>
             </tr>
           </tbody>
         </table>
       </td>
       <td>
         <table>
-          <thead>HLV</thead>
+          <thead>
+            HLV
+          </thead>
           <tbody>
-            <tr><td><img src="/img/Ancelotti.png" alt="Ancelotti"></td></tr>
-            <tr><td>Ancelotti</td></tr>
-            <tr><td>Tuổi : 18</td></tr>
+            <tr>
+              <td><img src="/img/Ancelotti.png" alt="Ancelotti" /></td>
+            </tr>
+            <tr>
+              <td>Ancelotti</td>
+            </tr>
+            <tr>
+              <td>Tuổi : 18</td>
+            </tr>
           </tbody>
           <tr></tr>
         </table>
       </td>
     </table>
-   <hr>
+    <hr />
 
-        <div>
-          <a href="/index.html">Trang chủ</a>
-          <a href="/page/schedule.html">Lịch thi đấu</a>
-          <a href="/page/standings.html">Bảng xếp hạng</a>
-          <a href="/page/players.html">Cầu thủ</a>
-          <a href="/page/blog.html">Blog</a>
-          <a href="/page/FAQ.html">FAQ</a>
-        </div>
-      
-      <div>
-        <td><img src="/img/facebook.png" alt="facebook"></td>
-        <td><img src="/img/instagram.png" alt="instagram"></td>
-        <td><img src="/img/tiktok.png" alt="tiktok"></td>
-        <td><img src="/img/youtube.png" alt="youtube"></td>
-        <td><img src="/img/telegram.png" alt="telegram"></td>
+    <div class="footer-container">
+      <!-- Footer links -->
+      <div class="footer-links">
+        <a href="/index.html" class="footer">Trang chủ</a>
+        <a href="/page/schedule.html" class="footer">Lịch thi đấu</a>
+        <a href="/page/standings.html" class="footer">Bảng xếp hạng</a>
+        <a href="/page/players.html" class="footer">Cầu thủ</a>
+        <a href="/page/blog.html" class="footer">Blog</a>
+        <a href="/page/FAQ.html" class="footer">FAQ</a>
       </div>
-     <p>Bản quyền  thuộc về &copy sachthethao  2025 .</p>
+
+      <!-- Social icons -->
+      <div class="social-icons">
+        <img src="/img/facebook.png" alt="facebook" />
+        <img src="/img/instagram.png" alt="instagram" />
+        <img src="/img/tiktok.png" alt="tiktok" />
+        <img src="/img/youtube.png" alt="youtube" />
+        <img src="/img/telegram.png" alt="telegram" />
+      </div>
+
+      <!-- Copyright text -->
+      <div class="copyright">Bản quyền thuộc về © sachthethao 2025.</div>
+    </div>
   </body>
 </html>

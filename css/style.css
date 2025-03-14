@@ -15,15 +15,56 @@ h4 {
   font-size: 10px;
 }
 
-.header {
-  text-decoration: none; /* Bỏ gạch chân mặc định */
-  color: white; /* Màu chữ trắng */
-  padding: 0 10px; /* 0 cho trên/dưới, 10px cho trái/phải */
+[href] {
+  text-decoration: none; /* Bỏ gạch chân */
+  font-weight: 500; /* Tô đậm chữ */
 }
 
-.header:hover {
-  text-decoration: underline; /* Khi hover, thêm gạch chân */
-  text-decoration-color: white; /* Màu gạch chân trắng */
+/* Định dạng chung cho header */
+header {
+  background-color: #ff0000; /* Màu nền header, bạn có thể thay đổi */
+  padding: 10px 0; /* Khoảng cách bên trong header */
+}
+
+/* Định dạng cho nav */
+.header-nav {
+  display: flex; /* Sắp xếp các nút theo hàng ngang */
+  justify-content: center; /* Căn giữa các nút */
+  gap: 20px; /* Khoảng cách giữa các nút */
+}
+
+/* Định dạng cho các nút (liên kết) */
+.nav-button {
+  text-decoration: none; /* Bỏ gạch chân mặc định */
+  color: white; /* Chữ màu trắng */
+  font-size: 16px; /* Kích thước chữ */
+  padding: 10px; /* Khoảng cách bên trong nút */
+  background: none; /* Không có nền */
+  border: none; /* Không có viền */
+  position: relative; /* Để tạo gạch chân khi hover */
+  transition: all 0.3s ease; /* Hiệu ứng mượt mà khi hover */
+}
+
+/* Khi hover, thêm gạch chân màu trắng */
+.nav-button:hover {
+  text-decoration: none; /* Đảm bảo không có gạch chân mặc định */
+}
+
+/* Tạo gạch chân bằng pseudo-element ::after */
+.nav-button::after {
+  content: ""; /* Tạo phần tử giả */
+  position: absolute;
+  width: 0; /* Ban đầu gạch chân có chiều dài 0 */
+  height: 2px; /* Độ dày gạch chân */
+  background-color: white; /* Màu gạch chân trắng */
+  left: 0;
+  bottom: 0; /* Đặt gạch chân ở dưới nút */
+  transition: width 0.3s ease; /* Hiệu ứng mở rộng gạch chân */
+}
+
+/* Khi hover, mở rộng gạch chân */
+.nav-button:hover::after {
+  width: 100%; /* Gạch chân mở rộng toàn bộ chiều rộng nút */
 }
 
 table {
@@ -36,31 +77,27 @@ thead {
 
 /* Quy tắc cho container chính */
 .footer-container {
-    display: flex;
-    flex-direction: column; /* Sắp xếp các phần tử theo cột */
-    align-items: center; /* Canh giữa các phần tử theo chiều ngang */
-    gap: 20px; /* Khoảng cách giữa các nhóm phần tử (links, icons, text) */
+  display: flex;
+  flex-direction: column; /* Sắp xếp các phần tử theo cột */
+  align-items: center; /* Canh giữa các phần tử theo chiều ngang */
+  gap: 20px; /* Khoảng cách giữa các nhóm phần tử (links, icons, text) */
 }
 
 /* Quy tắc cho các nhóm phần tử nằm ngang (links và icons) */
-.footer-links, .social-icons {
-    display: flex;
-    gap: 20px; /* Khoảng cách giữa các phần tử con trong nhóm */
+.footer-links,
+.social-icons {
+  display: flex;
+  gap: 20px; /* Khoảng cách giữa các phần tử con trong nhóm */
 }
 
 /* Quy tắc cho các liên kết trong footer */
 .footer {
-    text-decoration: none;
-    color: #FFD15C;
-    font-size: 18px;
-}
-
-.footer:hover {
-    text-decoration: underline;
-    text-decoration-color: #FFD15C;
+  text-decoration: none;
+  color: #ffd15c;
+  font-size: 18px;
 }
 
 /* Quy tắc cho văn bản bản quyền */
 .copyright {
-    text-align: center;
+  text-align: center;
 }

@@ -1,7 +1,60 @@
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #000000;
+  background-color: #f5f5f5;
 }
+.container {
+  text-align: center;
+  margin: 0 auto;
+}
+/* Định dạng cho news */
+/* Định dạng cho news */
+.news {
+  display: grid;
+  grid-template-rows: auto 1fr; /* Chia thành 2 hàng: topicLatest và latest */
+  gap: 10px; /* Khoảng cách giữa các hàng */
+}
+
+/* Định dạng cho latest */
+.latest {
+  display: grid;
+  grid-template-columns: 8fr 4fr; /* Chia thành 2 cột: hotNews chiếm 8/12, listNews chiếm 4/12 */
+  gap: 10px; /* Khoảng cách giữa các cột */
+}
+
+/* Định dạng cho hotNews */
+.hotNews {
+  display: grid;
+  grid-template-rows: auto auto; /* Chia thành 2 hàng: hình ảnh và tiêu đề */
+  gap: 10px; /* Khoảng cách giữa hình ảnh và tiêu đề */
+  width: 710px;
+  height: 369px;
+}
+
+.listNews {
+  width: 225px;
+  height: 369px;
+}
+
+/* Định dạng cho postNews */
+.postNews {
+  display: grid;
+  grid-template-columns: 1fr 4fr; /* Chia thành 2 cột: imageNews chiếm 1/5, titleNews chiếm 4/5 */
+  width: 225px;
+  height: 56px;
+  gap: 5px;
+}
+
+/* Định dạng cho titleNews */
+.titleNews {
+  display: grid;
+  grid-template-rows: 4fr 1fr; /* Chia thành 2 hàng: title chiếm 4 phần, timeNews chiếm 1 phần */
+  font-size: 12px;
+  width: 225px;
+  height: 32px;
+  text-align: left;
+}
+
 h1 {
   font-size: 20px;
 }
@@ -21,9 +74,9 @@ h4 {
 }
 
 /* Định dạng chung cho header */
-header {
-  background-color: #ff0000; /* Màu nền header, bạn có thể thay đổi */
-  padding: 10px 0; /* Khoảng cách bên trong header */
+.header {
+  background-color: #005566; /* Màu nền header, bạn có thể thay đổi */
+  padding: 0 20px; /* Khoảng cách bên trong header */
 }
 
 /* Định dạng cho nav */
@@ -36,7 +89,7 @@ header {
 /* Định dạng cho các nút (liên kết) */
 .nav-button {
   text-decoration: none; /* Bỏ gạch chân mặc định */
-  color: white; /* Chữ màu trắng */
+  color: #ffffff; /* Chữ màu trắng */
   font-size: 16px; /* Kích thước chữ */
   padding: 10px; /* Khoảng cách bên trong nút */
   background: none; /* Không có nền */
@@ -56,7 +109,7 @@ header {
   position: absolute;
   width: 0; /* Ban đầu gạch chân có chiều dài 0 */
   height: 2px; /* Độ dày gạch chân */
-  background-color: white; /* Màu gạch chân trắng */
+  background-color: #ffffff; /* Màu gạch chân trắng */
   left: 0;
   bottom: 0; /* Đặt gạch chân ở dưới nút */
   transition: width 0.3s ease; /* Hiệu ứng mở rộng gạch chân */
@@ -67,34 +120,21 @@ header {
   width: 100%; /* Gạch chân mở rộng toàn bộ chiều rộng nút */
 }
 
-table {
-  border: 1px solid red;
-}
-thead {
-  background-color: red;
-  color: white;
-}
-
-/* Quy tắc cho container chính */
-.footer-container {
+/* Quy tắc cho các liên kết trong footer */
+.footer {
+  text-decoration: none;
+  color: #000000;
+  font-size: 18px;
   display: flex;
   flex-direction: column; /* Sắp xếp các phần tử theo cột */
   align-items: center; /* Canh giữa các phần tử theo chiều ngang */
   gap: 20px; /* Khoảng cách giữa các nhóm phần tử (links, icons, text) */
 }
-
 /* Quy tắc cho các nhóm phần tử nằm ngang (links và icons) */
 .footer-links,
 .social-icons {
   display: flex;
   gap: 20px; /* Khoảng cách giữa các phần tử con trong nhóm */
-}
-
-/* Quy tắc cho các liên kết trong footer */
-.footer {
-  text-decoration: none;
-  color: #ffd15c;
-  font-size: 18px;
 }
 
 /* Quy tắc cho văn bản bản quyền */

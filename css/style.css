@@ -1,143 +1,293 @@
+/* Thiết lập cơ bản */
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #000000;
-  background-color: #f5f5f5;
+  color: #000;
+  background-color: #fff;
+  margin: 0;
 }
+
+/* Container chính */
 .container {
-  text-align: center;
+  width: 1300px;
+  min-height: 100vh; /* Thay height cố định để linh hoạt hơn */
   margin: 0 auto;
-}
-/* Định dạng cho news */
-/* Định dạng cho news */
-.news {
-  display: grid;
-  grid-template-rows: auto 1fr; /* Chia thành 2 hàng: topicLatest và latest */
-  gap: 10px; /* Khoảng cách giữa các hàng */
+  text-align: center;
 }
 
-/* Định dạng cho latest */
-.latest {
-  display: grid;
-  grid-template-columns: 8fr 4fr; /* Chia thành 2 cột: hotNews chiếm 8/12, listNews chiếm 4/12 */
-  gap: 10px; /* Khoảng cách giữa các cột */
+/* Header và Navigation */
+.header {
+  background-color: #1c2526;
+  padding: 0 10px;
 }
 
-/* Định dạng cho hotNews */
-.hotNews {
-  display: grid;
-  grid-template-rows: auto auto; /* Chia thành 2 hàng: hình ảnh và tiêu đề */
-  gap: 10px; /* Khoảng cách giữa hình ảnh và tiêu đề */
-  width: 710px;
-  height: 369px;
+.header-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
-.listNews {
+.nav-button {
+  color: #ffd700;
+  font-size: 16px;
+  padding: 10px;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-button::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #ffd700;
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s ease;
+}
+
+.nav-button:hover::after {
+  width: 100%;
+}
+
+/* Phần Hot (Trang chủ) */
+.hot {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 10px;
+  padding: 0 10px;
+}
+
+.hotNews,
+.hotTable,
+.playersBlock,
+.CoachList {
+  display: grid;
+  gap: 10px;
+}
+
+.hotTitle,
+.tableTitle,
+.playerTitle,
+.CoachTitle {
+  background-color: #ff0000;
+  width: fit-content;
+  padding: 0 30px 0 10px;
+  border-top-left-radius: 5px;
+  clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 100%, 0 100%);
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  height: 30px;
+  line-height: 30px;
+}
+
+.hotMain {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+}
+
+.hotList {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  gap: 10px;
+}
+
+.hotListbase {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 10px;
+}
+
+.hotListbase img {
+  width: 100px;
+  height: auto;
+}
+
+.hotHit {
+  display: grid;
+  grid-template-rows: 11fr 1fr;
+  gap: 10px;
+}
+
+.hotSup {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.hotSupbase {
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  gap: 10px;
+}
+
+.hotSupbase img {
   width: 225px;
-  height: 369px;
+  height: auto;
 }
 
-/* Định dạng cho postNews */
-.postNews {
-  display: grid;
-  grid-template-columns: 1fr 4fr; /* Chia thành 2 cột: imageNews chiếm 1/5, titleNews chiếm 4/5 */
-  width: 225px;
-  height: 56px;
-  gap: 5px;
+/* Bảng (Trang chủ và các trang con) */
+.tableSchedule,
+.tableStandings,
+.fullSchedule,
+.fullStandings {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Định dạng cho titleNews */
-.titleNews {
+.tableSchedule {
   display: grid;
-  grid-template-rows: 4fr 1fr; /* Chia thành 2 hàng: title chiếm 4 phần, timeNews chiếm 1 phần */
-  font-size: 12px;
-  width: 225px;
-  height: 32px;
+  grid-template-columns: 1fr 3fr;
+}
+
+.tableStandings,
+.fullStandings {
+  padding: 10px;
+}
+
+.tableChart {
+  width: 100%;
+  table-layout: auto;
+  border-collapse: collapse;
+}
+
+/* Players (Trang chủ và trang Players) */
+.lineup {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 10px;
+}
+.players-page{
+  padding: 20px;
+  display: grid;
+  gap: 10px;
+}
+.playersList,
+.fullPlayersList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+}
+
+.playerInfo,
+.Coach {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  display: grid;
+  grid-template-rows: 5fr 1fr 1fr;
+}
+
+.playerInfo {
+  background-color: #ffd700;
+  width: 100px;
+}
+
+.Coach {
+  background-color: #fff;
+  width: 150px;
+}
+
+/* Blog */
+.blog-page {
+  padding: 20px;
+}
+
+.blogList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.blogPost {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
   text-align: left;
 }
 
-h1 {
-  font-size: 20px;
-}
-h2 {
-  font-size: 15px;
-}
-h3 {
-  font-size: 13px;
-}
-h4 {
-  font-size: 10px;
+.blogPost img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
 }
 
-[href] {
-  text-decoration: none; /* Bỏ gạch chân */
-  font-weight: 500; /* Tô đậm chữ */
-}
-
-/* Định dạng chung cho header */
-.header {
-  background-color: #005566; /* Màu nền header, bạn có thể thay đổi */
-  padding: 0 20px; /* Khoảng cách bên trong header */
-}
-
-/* Định dạng cho nav */
-.header-nav {
-  display: flex; /* Sắp xếp các nút theo hàng ngang */
-  justify-content: center; /* Căn giữa các nút */
-  gap: 20px; /* Khoảng cách giữa các nút */
-}
-
-/* Định dạng cho các nút (liên kết) */
-.nav-button {
-  text-decoration: none; /* Bỏ gạch chân mặc định */
-  color: #ffffff; /* Chữ màu trắng */
-  font-size: 16px; /* Kích thước chữ */
-  padding: 10px; /* Khoảng cách bên trong nút */
-  background: none; /* Không có nền */
-  border: none; /* Không có viền */
-  position: relative; /* Để tạo gạch chân khi hover */
-  transition: all 0.3s ease; /* Hiệu ứng mượt mà khi hover */
-}
-
-/* Khi hover, thêm gạch chân màu trắng */
-.nav-button:hover {
-  text-decoration: none; /* Đảm bảo không có gạch chân mặc định */
-}
-
-/* Tạo gạch chân bằng pseudo-element ::after */
-.nav-button::after {
-  content: ""; /* Tạo phần tử giả */
-  position: absolute;
-  width: 0; /* Ban đầu gạch chân có chiều dài 0 */
-  height: 2px; /* Độ dày gạch chân */
-  background-color: #ffffff; /* Màu gạch chân trắng */
-  left: 0;
-  bottom: 0; /* Đặt gạch chân ở dưới nút */
-  transition: width 0.3s ease; /* Hiệu ứng mở rộng gạch chân */
-}
-
-/* Khi hover, mở rộng gạch chân */
-.nav-button:hover::after {
-  width: 100%; /* Gạch chân mở rộng toàn bộ chiều rộng nút */
-}
-
-/* Quy tắc cho các liên kết trong footer */
-.footer {
-  text-decoration: none;
-  color: #000000;
+.blogPost h2 {
   font-size: 18px;
-  display: flex;
-  flex-direction: column; /* Sắp xếp các phần tử theo cột */
-  align-items: center; /* Canh giữa các phần tử theo chiều ngang */
-  gap: 20px; /* Khoảng cách giữa các nhóm phần tử (links, icons, text) */
+  margin: 10px 0;
 }
-/* Quy tắc cho các nhóm phần tử nằm ngang (links và icons) */
+
+.blogPost p {
+  font-size: 14px;
+  color: #666;
+}
+
+.read-more {
+  color: #ffd700;
+  font-weight: bold;
+}
+
+/* FAQ */
+.faq-page {
+  padding: 20px;
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.faqItem {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  text-align: left;
+}
+
+.faqItem h3 {
+  margin: 0 0 10px;
+}
+
+.faqItem p {
+  margin: 0;
+  color: #666;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  font-size: 18px;
+}
+
 .footer-links,
 .social-icons {
   display: flex;
-  gap: 20px; /* Khoảng cách giữa các phần tử con trong nhóm */
+  gap: 20px;
 }
 
-/* Quy tắc cho văn bản bản quyền */
+[href] {
+  text-decoration: none;
+  font-weight: 500;
+}
+
 .copyright {
   text-align: center;
 }
+
+/* Tiêu đề */
+h1 { font-size: 20px; }
+h2 { font-size: 15px; }
+h3 { font-size: 13px; }
+h4 { font-size: 10px; }

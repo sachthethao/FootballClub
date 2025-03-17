@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteBase /
+
+# Buộc sử dụng HTTPS và loại bỏ www
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# Xử lý lỗi 404
+ErrorDocument 404 /page/404/
